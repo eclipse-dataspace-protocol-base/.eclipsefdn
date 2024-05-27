@@ -4,7 +4,6 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
   settings+: {
     description: "",
     name: "Eclipse Dataspace Protocol",
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,

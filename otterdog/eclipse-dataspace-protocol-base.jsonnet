@@ -30,7 +30,6 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
       private: "false",
       has_discussions: "true",
       has_issues: "true",
-      topics: "dataspaces",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",

@@ -51,6 +51,13 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
       private: false,
       has_discussions: true,
       has_issues: true,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_pull_request: true,
+          requires_status_checks: true,
+        },
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",

@@ -52,7 +52,7 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
     },
     orgs.newRepo('dsp_best_practices') {
       allow_merge_commit: true,
-      allow_update_branch: false,
+      allow_update_branch: true,
       delete_branch_on_merge: false,
       description: "Best Practices in conjunction with the usage and development of the Dataspace Protocol",
       has_discussions: true,

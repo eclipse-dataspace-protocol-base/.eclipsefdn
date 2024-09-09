@@ -50,5 +50,33 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('dsp_best_practices') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Best Practices in conjunction with the usage and development of the Dataspace Protocol",
+      has_discussions: true,
+      has_issues: true,
+      homepage: "https://eclipse.dev/dataspace-protocol-base",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_pull_request: true,
+          requires_status_checks: true,
+        },
+      ],
+    },
   ],
 }

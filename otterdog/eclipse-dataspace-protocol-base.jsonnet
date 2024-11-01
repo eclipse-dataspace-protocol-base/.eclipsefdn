@@ -19,7 +19,7 @@ orgs.newOrg('eclipse-dataspace-protocol-base') {
       gh_pages_build_type: "workflow",
       has_discussions: true,
       has_issues: true,
-      homepage: "https://eclipse.dev/dataspace-protocol-base",
+      homepage: "https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",

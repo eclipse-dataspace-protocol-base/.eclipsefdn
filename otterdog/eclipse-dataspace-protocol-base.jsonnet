@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-dataspace-protocol-base') {
+orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-base') {
   settings+: {
     description: "",
     name: "Eclipse Dataspace Protocol",

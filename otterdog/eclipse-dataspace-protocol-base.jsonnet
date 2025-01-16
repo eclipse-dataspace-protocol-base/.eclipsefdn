@@ -12,14 +12,16 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
   },
   _repositories+:: [
     orgs.newRepo('DataspaceProtocol') {
-      allow_merge_commit: true,
-      allow_update_branch: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
+      allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "The Dataspace Protocol is a set of specifications designed to facilitate interoperable data sharing between entities governed by usage control and based on Web technologies. These specifications define the schemas and protocols required for entities to publish data, negotiate Agreements, and access data in a data space ",
       gh_pages_build_type: "workflow",
       has_discussions: true,
       has_issues: true,
       homepage: "https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/",
+      squash_merge_commit_title: "PR_TITLE",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -41,10 +43,12 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
       ],
     },
     orgs.newRepo('website') {
-      allow_merge_commit: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Dataspace Protocol Base website",
+      squash_merge_commit_title: "PR_TITLE",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -58,13 +62,15 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
       ],
     },
     orgs.newRepo('dsp_best_practices') {
-      allow_merge_commit: true,
-      allow_update_branch: true,
+      allow_merge_commit: false,
+      allow_rebase_merge: false,
+      allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Best Practices in conjunction with the usage and development of the Dataspace Protocol",
       has_discussions: true,
       has_issues: true,
       homepage: "https://eclipse.dev/dataspace-protocol-base",
+      squash_merge_commit_title: "PR_TITLE",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",

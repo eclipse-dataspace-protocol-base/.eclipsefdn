@@ -38,7 +38,7 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
           requires_pull_request: true,
           requires_status_checks: true,
         },
-      ],      
+      ],
     },
     orgs.newRepo('website') {
       allow_merge_commit: true,
@@ -49,6 +49,13 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_pull_request: true,
+          requires_status_checks: true,
+        },
+      ],
     },
     orgs.newRepo('dsp_best_practices') {
       allow_merge_commit: true,

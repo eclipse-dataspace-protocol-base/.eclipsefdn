@@ -42,25 +42,6 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
         },
       ],
     },
-    orgs.newRepo('website') {
-      allow_merge_commit: false,
-      allow_rebase_merge: false,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "Dataspace Protocol Base website",
-      squash_merge_commit_title: "PR_TITLE",
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: 1,
-          requires_pull_request: true,
-          requires_status_checks: true,
-        },
-      ],
-    },
     orgs.newRepo('dsp_best_practices') {
       allow_merge_commit: false,
       allow_rebase_merge: false,

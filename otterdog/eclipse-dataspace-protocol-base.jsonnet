@@ -61,9 +61,10 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
         },
       ],
     },
-    orgs.newRepo('dsp_best_practices') {
+    orgs.newRepo('BestPractices') {
+      aliases: ['dsp_best_practices'],
       allow_merge_commit: false,
-      allow_rebase_merge: false,
+      allow_rebase_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Best Practices in conjunction with the usage and development of the Dataspace Protocol",

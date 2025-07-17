@@ -42,6 +42,37 @@ orgs.newOrg('technology.dataspace-protocol-base', 'eclipse-dataspace-protocol-ba
         },
       ],
     },
+    orgs.newRepo('ContractRetirementExtension') {
+      allow_merge_commit: false,
+      allow_rebase_merge: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "The Repo contains the specification for the Contract Retirement Extension of the Dataspace Protocol. It provides a mechanism to consensually end data sharing agreements.",
+      gh_pages_build_type: "workflow",
+      has_discussions: true,
+      has_issues: true,
+      homepage: "https://eclipse.dev/dataspace-protocol-base",
+      squash_merge_commit_title: "PR_TITLE",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_pull_request: true,
+          requires_status_checks: true,
+        },
+      ],
+    },
     orgs.newRepo('website') {
       allow_merge_commit: false,
       allow_rebase_merge: false,
